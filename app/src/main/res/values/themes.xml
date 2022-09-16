@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Poets" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryLight</item>
+        <item name="colorOnPrimary">@color/colorPrimaryLight</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorPrimaryLight</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryLight</item>
+        <item name="colorOnSecondary">@color/colorPrimaryLight</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="popupMenuStyle">@style/PopupTheme</item>
+    </style>
+
+    <style name="CustomToolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+
+        <item name="android:tint">@color/white</item>
+
+    </style>
+
+    <style name="navigationViewTheme">
+
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorControlHighlight">@color/colorPrimaryVariant</item>
+
+    </style>
+
+    <style name="PopupTheme">
+
+        <item name="android:popupBackground">@drawable/background_popup_menu</item>
+
+    </style>
+
+    <style name="BottomNavigationViewTheme"
+        parent="Widget.Design.BottomNavigationView">
+
+        <item name="fontFamily">@font/font_regular</item>
+
+    </style>
+
+    <style name="SpinnerTheme">
+
+        <item name="android:fontFamily">@font/font_regular</item>
+
+    </style>
+
+</resources>

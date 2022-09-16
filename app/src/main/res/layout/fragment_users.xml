@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:id="@+id/fragment_users_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/background_top_layouts">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_users_text_view_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/font_bold"
+            android:layoutDirection="rtl"
+            android:text="@string/text_users"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fragment_users_button_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/fragment_users_text_view_users"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_circle_button_white"
+            android:padding="10dp"
+            android:src="@drawable/ic_search" />
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/fragment_users_chip_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignStart="@id/fragment_users_text_view_users"
+            android:layout_alignEnd="@id/fragment_users_button_search"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_chip_navigation_bar_white"
+            android:elevation="8dp"
+            android:theme="@style/BottomNavigationViewTheme"
+            app:cnb_menuResource="@menu/menu_chip_navigation_bar_peoms"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_unselectedColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_users_view_pager_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_users_view_top" />
+
+</RelativeLayout>

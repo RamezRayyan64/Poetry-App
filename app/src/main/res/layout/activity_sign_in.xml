@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".activities.SignInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/fragment_users_view_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background_top_layouts">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/act_sign_in_text_view_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/act_sign_in_text_view_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="start"
+                android:text="@string/login_text"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_in_card_view_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_users_view_top"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/act_sign_in_edit_text_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:fontFamily="@font/font_regular"
+                android:hint="@string/text_username"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textCursorDrawable="@color/colorPrimaryLight"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_in_card_view_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_in_card_view_user_name"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="rtl"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/act_sign_in_edit_text_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:fontFamily="@font/font_regular"
+                android:hint="@string/text_phone"
+                android:inputType="number"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/colorPrimaryLight"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_in_card_view_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_in_card_view_phone_number"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:layoutDirection="rtl"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/act_sign_in_button_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_buttons"
+                android:fontFamily="@font/font_bold"
+                android:onClick="signIn"
+                android:text="@string/text_Enter"
+                android:textColor="@color/color_texts"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/act_sign_in_text_view_info_for_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_in_card_view_sign_in"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="@string/text_info_for_sign_in"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_in_card_view_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_in_text_view_info_for_sign_in"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:layoutDirection="rtl"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/act_sign_in_button_create_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_buttons"
+                android:fontFamily="@font/font_bold"
+                android:onClick="createNewAccount"
+                android:text="@string/create_account"
+                android:textColor="@color/color_texts"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_in_card_view_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_in_card_view_create_account"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="rtl"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/act_sign_in_button_guest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_buttons"
+                android:fontFamily="@font/font_bold"
+                android:onClick="signInAsGuest"
+                android:text="@string/text_guest"
+                android:textColor="@color/color_texts"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:paddingHorizontal="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/layout_criticism_image_view_profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_circle_white"
+        android:cropToPadding="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/layout_criticism_image_view_simple_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/layout_criticism_image_view_profile"
+        android:layout_alignTop="@id/layout_criticism_image_view_profile"
+        android:layout_alignEnd="@id/layout_criticism_image_view_profile"
+        android:layout_alignBottom="@id/layout_criticism_image_view_profile"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_simple_profile" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/layout_criticism_image_view_profile"
+        android:layout_alignBottom="@id/layout_criticism_image_view_profile"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/layout_criticism_image_view_profile"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/layout_criticism_text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_bold"
+            android:text="@string/text_name"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/layout_criticism_view_circle"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/background_dot" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/layout_criticism_text_view_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/font_regular"
+            android:text="@string/text_time"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/layout_criticism_text_view_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/layout_criticism_image_view_profile"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/font_regular"
+        android:inputType="textMultiLine"
+        android:paddingHorizontal="10dp"
+        android:text="@string/text_context"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/layout_criticism_button_dislike"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_criticism_text_view_comment"
+        android:layout_alignEnd="@id/layout_criticism_text_view_comment"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_dislike"
+        android:fontFamily="@font/font_light"
+        android:paddingHorizontal="5dp"
+        android:text="@string/text_zero" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/layout_criticism_button_like"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_criticism_text_view_comment"
+        android:layout_toStartOf="@id/layout_criticism_button_dislike"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_like"
+        android:fontFamily="@font/font_light"
+        android:paddingHorizontal="5dp"
+        android:text="@string/text_zero" />
+
+    <View
+        android:id="@+id/layout_criticism_view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layout_criticism_button_like"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey_20" />
+
+</RelativeLayout>

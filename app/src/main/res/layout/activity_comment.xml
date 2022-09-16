@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:layoutDirection="rtl"
+    tools:context=".activities.CommentActivity">
+
+    <RelativeLayout
+        android:id="@+id/act_comment_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_top_layouts">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/act_comment_button_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_circle_button_white"
+            android:onClick="goToHome"
+            android:padding="6dp"
+            android:src="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/act_comment_text_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/font_bold"
+            android:text="@string/text_comments"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/act_comment_layout_send_comment"
+        android:layout_below="@id/act_comment_view_top"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/act_comment_image_view_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_circle_white"
+                android:cropToPadding="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/act_comment_image_view_simple_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/act_comment_image_view_profile"
+                android:layout_alignTop="@id/act_comment_image_view_profile"
+                android:layout_alignEnd="@id/act_comment_image_view_profile"
+                android:layout_alignBottom="@id/act_comment_image_view_profile"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_simple_profile" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/act_comment_image_view_profile"
+                android:layout_alignBottom="@id/act_comment_image_view_profile"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/act_comment_image_view_profile"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/act_comment_text_view_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_bold"
+                    android:text="@string/text_name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/act_comment_text_view_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/text_time"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/act_comment_image_view_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/act_comment_image_view_profile"
+                android:layout_alignStart="@id/act_comment_text_view_text"
+                android:layout_alignEnd="@id/act_comment_text_view_text"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/act_comment_text_view_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@id/act_comment_image_view_post_image"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/font_regular"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="10dp"
+                android:text="@string/text_context"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/act_comment_view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/act_comment_text_view_text"
+                android:layout_alignStart="@id/act_comment_text_view_text"
+                android:layout_alignEnd="@id/act_comment_text_view_text"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/act_comment_text_view_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/act_comment_view_line"
+                android:layout_alignStart="@id/act_comment_view_line"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_bold"
+                android:text="@string/text_comments"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/act_comment_recycler_view_comments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/act_comment_text_view_comment" />
+
+            <LinearLayout
+                android:id="@+id/act_comment_layout_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/act_comment_recycler_view_comments"
+                android:layout_alignBottom="@id/act_comment_recycler_view_comments"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/empty" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_bold"
+                    android:text="@string/text_no_comment"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/act_comment_layout_send_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/act_comment_edit_text_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text_comment"
+            android:fontFamily="@font/font_regular"
+            android:hint="@string/text_write_comment_here"
+            android:inputType="text"
+            android:layoutDirection="rtl"
+            android:maxLines="1"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@color/colorPrimaryLight"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/act_comment_button_send_comment"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/background_edit_text_send_comment"
+            android:padding="8dp"
+            android:rotation="180"
+            android:src="@drawable/ic_send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:id="@+id/fragment_users_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_top_layouts">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fragment_home_button_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_circle_button_white"
+            android:padding="10dp"
+            android:src="@drawable/ic_search" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_home_card_view_new_post"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:background="@color/color_button"
+            app:cardCornerRadius="50dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fragment_home_button_new_post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/color_button"
+                android:fontFamily="@font/font_bold"
+                android:paddingHorizontal="5dp"
+                android:text="@string/text_new_poet"
+                android:textColor="@color/color_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_home_text_view_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/font_bold"
+            android:text="@string/text_home"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_home_recycler_view_posts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_users_view_top" />
+
+    <LinearLayout
+        android:id="@+id/fragment_home_layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/fragment_home_recycler_view_posts"
+        android:layout_alignBottom="@id/fragment_home_recycler_view_posts"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/empty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_bold"
+            android:text="@string/text_no_post"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

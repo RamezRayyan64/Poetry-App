@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">شعرا</string>
+    <string name="background_text">We will help you to share your poem</string>
+    <string name="powered_by">تهیه شده توسط آسوده آور</string>
+
+    <!-- Strings for On boarding screen -->
+
+    <!--Titles of splash activity-->
+    <string name="first_slide_title">شما میتوانید اشعار تانرا شریک سازید</string>
+    <string name="second_slide_title">شما میتوانید شاعری کنید</string>
+    <string name="third_slide_title">شما میتوانید اشعار تانرا پست کنید</string>
+    <string name="fourth_slide_title">شما میتوانید یک مرد موفق باشید</string>
+
+    <!--Description of splash activity-->
+    <string name="first_slide_desc">شما میتوانید اشعار تانرا با تمام کسانیکه شعر دوست دارند شریک سازید همچنان میتوانید اشعار دیگران بخوانید.</string>
+    <string name="second_slide_desc">شما میتوانید اشعار تانرا با تمام کسانیکه شعر دوست دارند شریک سازید همچنان میتوانید اشعار دیگران بخوانید.</string>
+    <string name="third_slide_desc">شما میتوانید اشعار تانرا با تمام کسانیکه شعر دوست دارند شریک سازید همچنان میتوانید اشعار دیگران بخوانید.</string>
+    <string name="fourth_slide_desc">شما میتوانید اشعار تانرا با تمام کسانیکه شعر دوست دارند شریک سازید همچنان میتوانید اشعار دیگران بخوانید.</string>
+
+    <!--Bottoms of splash activity -->
+    <string name="text_skip">بگذرید</string>
+    <string name="next_btn">بعدی</string>
+    <string name="text_get_started">آغاز کنید</string>
+
+    <!--Descriptions of loginPage -->
+    <string name="login_text">ورود به سیستم</string>
+    <string name="text_info_for_sign_in">اگر حساب ندارید میتوانید حساب جدبد بسازید یا به حیث مهمان وارید شوید.</string>
+    <string name="text_Enter">ورود</string>
+    <string name="text_guest">مهمان</string>
+    <string name="text_new_account">حساب جدید</string>
+    <string name="text_password">رمز عبور</string>
+    <string name="text_username">نام</string>
+
+    <!--Descriptions of signUpPage  -->
+    <string name="create_account">ایجاد حساب</string>
+    <string name="text_name">نام</string>
+    <string name="text_lastname">تخلص</string>
+    <string name="create_email">ایمیل</string>
+    <string name="create_password">رمزعبور</string>
+    <string name="text_poet">شاعر</string>
+    <string name="text_likes_poet">شعر دوست</string>
+    <string name="text_unknown">نمیخواهم مشخص کنم</string>
+    <string name="text_choose">انتخاب کابر</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slider_heading">Slider heading</string>
+    <string name="slider_description">Slider Description</string>
+    <string name="text_phone">شماره تماس</string>
+    <string name="text_phones">شماره های تماس</string>
+    <string name="text_setting">تنظیمات</string>
+    <string name="text_poet_fight">شعر جنگی</string>
+    <string name="text_home">خانه</string>
+    <string name="text_poems">شاعران</string>
+    <string name="text_profile">پروفایل</string>
+    <string name="text_search">جستجو</string>
+    <string name="text_poet_and_poetry">شعر و شاعری</string>
+    <string name="text_poets_count">اشعار</string>
+    <string name="text_friends_count">دوستان</string>
+    <string name="text_posts_count">پست ها</string>
+    <string name="text_coming_soon">بزودی…</string>
+    <string name="text_like">پسندیدن</string>
+    <string name="text_comment">نظر</string>
+    <string name="text_criticism">نقد</string>
+    <string name="text_new_poet">آیا شعر جدیدی دارید؟</string>
+    <string name="text_like_poems">شعر دوستان</string>
+    <string name="text_example">تقلید از رسم و رواج و شکل ظاهری کفار یا به اصطلاح عام تحت تاثیر قرار گرفتن فرهنگ کفار است مثلا امروزه بعضی از جوان مسلمان وقتی میرود به سلمانی همراه خود یک عکس از استایل موی یک کافر را میبرد.</string>
+    <string name="text_time_example">شنبه 2:00 بعد از ظهر</string>
+    <string name="text_name_example">احمد احمدی</string>
+    <string name="text_text">text</string>
+    <string name="text_zero">0</string>
+    <string name="text_biography">زندگینامه</string>
+    <string name="text_new_post">پست جدید</string>
+    <string name="text_poet_text">متن شعر را اینجا بنویسید…</string>
+    <string name="text_can_also_add">همچنان میتوانید از گزینه های پایین استفاده کنید:</string>
+    <string name="text_image">تصویر</string>
+    <string name="text_video">ویدیو</string>
+    <string name="text_record">صدا</string>
+    <string name="text_post">پست کنید</string>
+    <string name="text_time">زمان</string>
+    <string name="text_more">… بیشتر</string>
+    <string name="text_context">متن</string>
+    <string name="text_comments">نظریات</string>
+    <string name="text_write_comment_here">نظر خود را اینجا بنویسید...</string>
+    <string name="text_write_criticism_here">انتقاد خود را اینجا بنویسید...</string>
+    <string name="text_users">کاربران</string>
+    <string name="text_criticisms">انتقادات</string>
+    <string name="text_no_criticism">انتقادی وجود ندارد</string>
+    <string name="text_no_comment">نظری وجود ندارد</string>
+    <string name="text_no_likes_poem">شعر دوستی وجود ندارد</string>
+    <string name="text_no_poem">شاعری وجود ندارد</string>
+    <string name="text_no_post">پستی وجود ندارد</string>
+    <string name="text_edit_profile">ویرایش حساب</string>
+    <string name="text_save_changes">ثبت تغییرات</string>
+    <string name="text_example_phone">0700000000</string>
+    <string name="text_invite_friends">دعوت دوستان</string>
+    <string name="text_sharing">اشتراک گذاری</string>
+    <string name="text_share">اشتراک</string>
+    <string name="text_more_menu">بیشتر</string>
+    <string name="text_contact_us">ارتباط باما</string>
+    <string name="text_exit">خروج</string>
+    <string name="text_asooda_owar">آسوده آور</string>
+    <string name="text_about_company">در باره شرکت</string>
+    <string name="text_about_company_info">آسوده آور یک شرکت راه حل فناوری اطلاعات و ارتباطات است که در زمینه طراحی و توسعه وب فعالیت می کند"توسعه برنامه های تلفن همراه ، ایجاد پایگاه داده های مختلف و کار بر روی طراحی گرافیک</string>
+    <string name="text_contact_us_with">راه های تماس با ما</string>
+    <string name="text_address">آدرس</string>
+    <string name="text_address_info">افغانستان, هرات, باغ آزادی, روبروی جاده نوایی 3</string>
+    <string name="text_email">ایمیل</string>
+    <string name="text_email_info">info@asoodaowar.com</string>
+    <string name="text_phone_number_1">+93 (0)72 937 465 8</string>
+    <string name="text_phone_number_2">+93 (0)79 799 323 7</string>
+</resources>

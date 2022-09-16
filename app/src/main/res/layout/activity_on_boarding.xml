@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".activities.OnBoardingActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/act_on_boarding_button_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/font_bold"
+        android:onClick="skipOnBoardingSlider"
+        android:padding="10dp"
+        android:text="@string/text_skip"
+        android:textColor="@color/color_texts_skip"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/act_on_boarding_button_previous"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_image_back"
+        android:onClick="previousViewPagerItem"
+        android:padding="6dp"
+        android:src="@drawable/ic_back" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/act_on_boarding_view_pager_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/act_on_boarding_card_view_get_started"
+        android:layout_below="@id/act_on_boarding_button_skip"
+        android:layout_centerHorizontal="true"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/act_on_boarding_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:layoutDirection="ltr"
+        android:max="100"
+        android:progress="25"
+        android:progressDrawable="@drawable/drawable_circle_progress_bar"
+        android:secondaryProgress="100" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/act_on_boarding_image_view_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/act_on_boarding_progress_bar"
+        android:layout_alignTop="@id/act_on_boarding_progress_bar"
+        android:layout_alignEnd="@id/act_on_boarding_progress_bar"
+        android:layout_alignBottom="@id/act_on_boarding_progress_bar"
+        android:layout_margin="24dp"
+        android:background="@drawable/background_buttons"
+        android:onClick="nextViewPagerItem"
+        android:padding="8dp"
+        android:src="@drawable/ic_next" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/act_on_boarding_card_view_get_started"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/act_on_boarding_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layoutDirection="rtl"
+        android:visibility="invisible"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/act_on_boarding_button_get_started"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_buttons"
+            android:fontFamily="@font/font_bold"
+            android:onClick="skipOnBoardingSlider"
+            android:text="@string/text_get_started"
+            android:textColor="@color/color_texts"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

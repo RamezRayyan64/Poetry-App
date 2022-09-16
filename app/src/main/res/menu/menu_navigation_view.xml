@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_navigation_view_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/text_home" />
+
+    </group>
+
+    <item android:title="@string/text_users">
+
+        <menu>
+
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/menu_navigation_view_invite_friend"
+                    android:icon="@drawable/ic_invite"
+                    android:title="@string/text_invite_friends" />
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="@string/text_sharing">
+
+        <menu>
+
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/menu_navigation_view_share"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/text_share" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="@string/text_more_menu">
+
+        <menu>
+
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/menu_navigation_view_contact_us"
+                    android:icon="@drawable/ic_info"
+                    android:title="@string/text_contact_us" />
+
+                <item
+                    android:id="@+id/menu_navigation_view_logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="@string/text_exit" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

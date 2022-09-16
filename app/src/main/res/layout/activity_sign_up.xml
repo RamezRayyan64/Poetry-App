@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".activities.SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/act_sign_up_view_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background_top_layouts">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/act_sign_up_image_view_go_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_circle_button_white"
+                android:onClick="goBack"
+                android:padding="6dp"
+                android:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/act_sign_up_text_view_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/act_sign_up_text_view_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="start"
+                android:text="@string/create_account"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/act_sign_up_image_view_profile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/act_sign_up_view_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_circle_light"
+            android:cropToPadding="true"
+            android:onClick="getImageFromStorage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/act_sign_up_image_view_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/act_sign_up_image_view_profile"
+            android:layout_alignTop="@id/act_sign_up_image_view_profile"
+            android:layout_alignEnd="@id/act_sign_up_image_view_profile"
+            android:layout_alignBottom="@id/act_sign_up_image_view_profile"
+            android:onClick="getImageFromStorage"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_camera" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_up_card_view_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_up_image_view_profile"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/act_sign_up_edit_text_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:fontFamily="@font/font_regular"
+                android:hint="@string/text_username"
+                android:inputType="text"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textCursorDrawable="@color/colorPrimaryLight"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_up_card_view_user_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_up_card_view_user_name"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="rtl"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/act_sign_up_edit_text_user_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:fontFamily="@font/font_regular"
+                android:hint="@string/text_lastname"
+                android:inputType="text"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/colorPrimaryLight"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_up_card_view_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_up_card_view_user_lastname"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="rtl"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/act_sign_up_edit_text_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:fontFamily="@font/font_regular"
+                android:hint="@string/text_phone"
+                android:inputType="number"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@color/colorPrimaryLight"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_up_card_view_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_up_card_view_phone_number"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:layoutDirection="rtl"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/act_sign_up_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="13dp"
+                android:theme="@style/SpinnerTheme"
+                app:backgroundTint="@color/colorPrimaryLight" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/act_sign_up_card_view_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_sign_up_card_view_spinner"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:layoutDirection="rtl"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/act_sign_up_button_create_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_buttons"
+                android:fontFamily="@font/font_bold"
+                android:onClick="signUp"
+                android:text="@string/create_account"
+                android:textColor="@color/color_texts"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

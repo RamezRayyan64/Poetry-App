@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act_home_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:layoutDirection="rtl"
+    tools:context=".activities.HomeActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/act_home_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:theme="@style/navigationViewTheme"
+        app:headerLayout="@layout/layout_header_navigation_view"
+        app:menu="@menu/menu_navigation_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/act_home_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/act_home_chip_navigation_bar" />
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/act_home_chip_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_chip_navigation_bar_light_gray"
+            android:elevation="8dp"
+            android:theme="@style/BottomNavigationViewTheme"
+            app:cnb_menuResource="@menu/menu_chip_navigation_bar"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_unselectedColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
