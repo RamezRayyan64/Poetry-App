@@ -1,4 +1,4 @@
-package com.rayyantech.poets;
+package com.example.rayyantech.poetry_app_ui;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.rayyantech.poets", appContext.getPackageName());
+        assertEquals("com.example.rayyantech.poetry_app_ui", appContext.getPackageName());
     }
 }

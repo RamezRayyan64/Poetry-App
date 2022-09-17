@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rayyantech.poets">
+    package="com.example.rayyantech.poetry_app_ui">
 
     <application
         android:allowBackup="true"

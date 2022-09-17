@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.rayyantech.poets"
+        applicationId "com.example.rayyantech.poetry_app_ui"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

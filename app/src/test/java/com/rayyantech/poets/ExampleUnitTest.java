@@ -1,4 +1,4 @@
-package com.rayyantech.poets;
+package com.example.rayyantech.poetry_app_ui;
 
 import org.junit.Test;
 
